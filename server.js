@@ -13,4 +13,8 @@ res.sendFile(path.join(__dirname+'/dist/big-fridge-master/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+    console.log("App is running on port " + port);
+});
